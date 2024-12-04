@@ -1,0 +1,21 @@
+{
+  "extends": ["@repo/typescript-config/wxt.json"],
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "strict": true,
+    "rootDir": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@entrypoints/*": ["./entrypoints/*"],
+      "@repo/*": ["../../packages/*"]
+    }
+  },
+  "include": [
+    "./src/**/*",
+    "./entrypoints/**/*",
+    "./entrypoints/background.ts",
+    "./.wxt/**/*",
+    "search-db.ts"
+  ],
+  "exclude": ["../.output", "./node_modules", "./chrome-data"]
+}
